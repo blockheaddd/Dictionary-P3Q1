@@ -9,7 +9,7 @@ public class HashDictionaryTester {
 
     public static void main(String args[]) {
 
-        int SIZE = 25;
+        int SIZE = 32;
 
         //Using variables from book
         int N; // N is number in HashDictionary
@@ -31,23 +31,25 @@ public class HashDictionaryTester {
         Random rand = new Random(100);
         for(int i = 0; i < SIZE; i ++)
         {
-            KVpair<Integer, String> temp = new KVpair<>(rand.nextInt(), (char)(i+65) + "");
+            KVpair temp = new KVpair(rand.nextInt(100), (char)(i+65) + "");
             entries[i] = temp;
         }
 
 
         //Insert into HashDictionary
         System.out.println("INSERT \n------");
-        HashDictionary<Integer, String> hashDict = new HashDictionary<>(SIZE);
+        HashDictionary hashDict = new HashDictionary(SIZE);
         Integer key; String value;
         for(int i=0; i < SIZE; i++) {
-            key = (Integer)entries[i].key();
-            value = (String)entries[i].value();
+            key = entries[i].key();
+            value = entries[i].value();
 
             hashDict.insert(key, value);
             alpha = (float)hashDict.size() / (float)SIZE;
             System.out.println("alpha: " + alpha);
         }
+
+        hashDict.print();
 
         //Remove from HashDictionary
         System.out.println("REMOVE \n------");

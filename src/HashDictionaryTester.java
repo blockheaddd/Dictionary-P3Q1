@@ -16,7 +16,9 @@ public class HashDictionaryTester {
         int M; //M is the max size of the HashDictionary
         float alpha;//Alpha is N/M
         Scanner in = new Scanner(System.in);
-        System.out.println("Please enter size of HashDictionary: ");
+
+        //Size must be a power of two so that quadratic probing reaches all spots
+        System.out.println("Please enter size of HashDictionary (Must be Power of 2): ");
 
         try{
             SIZE = in.nextInt();
@@ -24,6 +26,16 @@ public class HashDictionaryTester {
         catch(Exception e)
         {
             System.out.println("Error with input. Size set to: " + SIZE);
+        }
+
+        //If size is not a power of two find closest power of two that is greater than input size
+        if(Math.sqrt(SIZE)%2 != 0)
+        {
+            int tempSz = 2;
+            while(tempSz < SIZE)
+                tempSz *= 2;
+            SIZE = tempSz;
+            System.out.println("Size must be a power of two. Size set to: " + SIZE);
         }
 
         //Create an array of KVPairs with random ID's and elements

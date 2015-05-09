@@ -6,16 +6,7 @@ class HashDictionary implements Dictionary{
     private int maxsize; // Maximum size of dictionary
     HashDictionary() { this(defaultSize); }
     HashDictionary(int sz) {
-
-        if(sz%2 != 0) {
-            maxsize = 2;
-            while (maxsize < sz)
-                maxsize *= 2;
-            System.out.println("Size must be power of 2, set to: " + maxsize);
-        }
-        else
-            maxsize = sz;
-
+        maxsize = sz;
         hashTbl = new HashTable(maxsize);
         count = 0;
     }

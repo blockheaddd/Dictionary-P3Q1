@@ -1,0 +1,289 @@
+Please enter size of HashDictionary (Must be Power of 2):
+32
+Size must be a power of two. Size set to: 32
+============= INSERT ============
+
+= 1. Linear Probing =
+
+N: 1  A: 0.03125
+N: 1  A: 0.0625
+N: 1  A: 0.09375
+N: 1  A: 0.125
+N: 1  A: 0.15625
+N: 1  A: 0.1875
+N: 1  A: 0.21875
+N: 1  A: 0.25
+N: 1  A: 0.28125
+N: 1  A: 0.3125
+N: 1  A: 0.34375
+N: 1  A: 0.375
+N: 2  A: 0.40625
+N: 3  A: 0.4375
+N: 3  A: 0.46875
+N: 2  A: 0.5
+N: 2  A: 0.53125
+N: 2  A: 0.5625
+N: 2  A: 0.59375
+N: 2  A: 0.625
+N: 2  A: 0.65625
+N: 2  A: 0.6875
+N: 2  A: 0.71875
+N: 2  A: 0.75
+N: 2  A: 0.78125
+N: 2  A: 0.8125
+N: 16  A: 0.84375
+N: 9  A: 0.875
+N: 6  A: 0.90625
+Duplicates not allowed
+N: 1  A: 0.9375
+N: 8  A: 0.96875
+
+= 2. Quadratic Probing =
+
+N: 1  A: 0.03125
+N: 1  A: 0.0625
+N: 1  A: 0.09375
+N: 1  A: 0.125
+N: 1  A: 0.15625
+N: 1  A: 0.1875
+N: 1  A: 0.21875
+N: 1  A: 0.25
+N: 1  A: 0.28125
+N: 1  A: 0.3125
+N: 1  A: 0.34375
+N: 1  A: 0.375
+N: 3  A: 0.40625
+N: 1  A: 0.4375
+N: 1  A: 0.46875
+N: 1  A: 0.5
+N: 1  A: 0.53125
+N: 1  A: 0.5625
+N: 1  A: 0.59375
+N: 1  A: 0.625
+N: 1  A: 0.65625
+N: 1  A: 0.6875
+N: 1  A: 0.71875
+N: 1  A: 0.75
+N: 1  A: 0.78125
+N: 1  A: 0.8125
+N: 6  A: 0.84375
+N: 4  A: 0.875
+N: 4  A: 0.90625
+Duplicates not allowed
+N: 1  A: 0.9375
+N: 9  A: 0.96875
+
+= 3. Pseudo Random Probing =
+
+N: 1  A: 0.03125
+N: 1  A: 0.0625
+N: 1  A: 0.09375
+N: 1  A: 0.125
+N: 1  A: 0.15625
+N: 1  A: 0.1875
+N: 1  A: 0.21875
+N: 1  A: 0.25
+N: 1  A: 0.28125
+N: 1  A: 0.3125
+N: 1  A: 0.34375
+N: 1  A: 0.375
+N: 3  A: 0.40625
+N: 3  A: 0.4375
+N: 3  A: 0.46875
+N: 1  A: 0.5
+N: 1  A: 0.53125
+N: 1  A: 0.5625
+N: 1  A: 0.59375
+N: 1  A: 0.625
+N: 1  A: 0.65625
+N: 1  A: 0.6875
+N: 1  A: 0.71875
+N: 7  A: 0.75
+N: 7  A: 0.78125
+N: 7  A: 0.8125
+N: 1  A: 0.84375
+N: 3  A: 0.875
+N: 3  A: 0.90625
+Duplicates not allowed
+Duplicates not allowed
+
+Pos:  | Key:  | Value:  
+0     | 48    | [ 
+1     | 65    | W 
+2     | 66    | F 
+3     | 67    | Y 
+4     | 36    | G 
+5     | 92    | \ 
+6     | 0     | ] 
+7     | 95    | ` 
+8     | 72    | X 
+9     | 73    | S 
+10    | 74    | C 
+11    | 74    | _ 
+12    | null  | null 
+13    | 13    | J 
+14    | 78    | R 
+15    | 15    | A 
+16    | 80    | Q 
+17    | 17    | L 
+18    | 50    | B 
+19    | 19    | T 
+20    | 52    | O 
+21    | 53    | U 
+22    | 22    | K 
+23    | 23    | I 
+24    | 88    | D 
+25    | 88    | H 
+26    | 56    | M 
+27    | 91    | E 
+28    | 57    | N 
+29    | 59    | P 
+30    | 28    | V 
+31    | 31    | Z 
+
+=========== DELETE ===========
+
+
+= 1. Linear Probing =
+
+Key: 15 removed.
+Key: 50 removed.
+Key: 74 removed.
+Key: 88 removed.
+Key: 91 removed.
+Key: 66 removed.
+Key: 36 removed.
+Key: 88 removed.
+Key: 23 removed.
+Key: 13 removed.
+Key: 22 removed.
+Key: 17 removed.
+Key: 56 removed.
+Key: 57 removed.
+Key: 52 removed.
+Key: 59 removed.
+Key: 80 removed.
+Key: 78 removed.
+Key: 73 removed.
+Key: 19 removed.
+Key: 53 removed.
+Key: 28 removed.
+Key: 65 removed.
+Key: 72 removed.
+Key: 67 removed.
+Key: 31 removed.
+Key: 48 removed.
+Key: 92 removed.
+Key: 0 removed.
+HT[27] == null
+Key: 28 NOT found
+Key: 74 removed.
+Key: 95 removed.
+
+= 2. Quadratic Probing =
+
+Key: 15 removed.
+Key: 50 removed.
+Key: 74 removed.
+Key: 88 removed.
+Key: 91 removed.
+Key: 66 removed.
+Key: 36 removed.
+Key: 88 removed.
+Key: 23 removed.
+Key: 13 removed.
+Key: 22 removed.
+Key: 17 removed.
+Key: 56 removed.
+Key: 57 removed.
+Key: 52 removed.
+Key: 59 removed.
+Key: 80 removed.
+Key: 78 removed.
+Key: 73 removed.
+Key: 19 removed.
+Key: 53 removed.
+Key: 28 removed.
+Key: 65 removed.
+Key: 72 removed.
+Key: 67 removed.
+Key: 31 removed.
+Key: 48 removed.
+Key: 92 removed.
+Key: 0 removed.
+Key: 28 removed.
+Key: 74 removed.
+HT[15] == null
+Key: 95 NOT found
+
+= 3. Pseudo Random Probing =
+
+Key: 15 removed.
+Key: 50 removed.
+Key: 74 removed.
+Key: 88 removed.
+Key: 91 removed.
+Key: 66 removed.
+Key: 36 removed.
+Key: 88 removed.
+Key: 23 removed.
+Key: 13 removed.
+Key: 22 removed.
+Key: 17 removed.
+Key: 56 removed.
+Key: 57 removed.
+Key: 52 removed.
+Key: 59 removed.
+Key: 80 removed.
+Key: 78 removed.
+Key: 73 removed.
+Key: 19 removed.
+Key: 53 removed.
+Key: 28 removed.
+Key: 65 removed.
+Key: 72 removed.
+Key: 67 removed.
+Key: 31 removed.
+Key: 48 removed.
+Key: 92 removed.
+Key: 0 removed.
+HT[25] == null
+Key: 28 NOT found
+HT[7] == null
+Key: 74 NOT found
+
+Pos:  | Key:  | Value:  
+0     | null  | null 
+1     | null  | null 
+2     | null  | null 
+3     | null  | null 
+4     | null  | null 
+5     | null  | null 
+6     | null  | null 
+7     | null  | null 
+8     | null  | null 
+9     | null  | null 
+10    | null  | null 
+11    | null  | null 
+12    | null  | null 
+13    | null  | null 
+14    | null  | null 
+15    | null  | null 
+16    | null  | null 
+17    | null  | null 
+18    | null  | null 
+19    | null  | null 
+20    | null  | null 
+21    | null  | null 
+22    | null  | null 
+23    | null  | null 
+24    | null  | null 
+25    | null  | null 
+26    | null  | null 
+27    | null  | null 
+28    | null  | null 
+29    | null  | null 
+30    | null  | null 
+31    | null  | null 
+
+Process finished with exit code 0

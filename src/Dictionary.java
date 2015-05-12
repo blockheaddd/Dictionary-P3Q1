@@ -1,4 +1,13 @@
-/** The Dictionary abstract class. */
+/**
+ * Dictionary.java
+ *
+ * A class that models the Dictionary ADT
+ * Code is from  the Data Structures book
+ * with slight modifications by
+ * Gus Silva and Anil Jethani
+ * Using IntelliJ IDEA 14
+ * On 5/4/14
+ */
 public interface Dictionary {
     /** Reinitialize dictionary */
     public void clear();

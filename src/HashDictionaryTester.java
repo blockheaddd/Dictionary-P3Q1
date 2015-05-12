@@ -1,5 +1,11 @@
 /**
- * Created by GusSilva on 5/4/15.
+ * HashDictionaryTester.java
+ *
+ * A simple class to test the HashDictionary class
+ * Created by Gus Silva and Anil Jethani
+ * Using IntelliJ IDEA 14
+ * On 5/4/14
+ *
  */
 
 import java.util.Random;
@@ -10,17 +16,15 @@ public class HashDictionaryTester {
     public static void main(String args[]) {
 
         int SIZE = 32;
+        int hashType = 1;
+        final int LINEAR = 1, QUADRATIC = 2, PSEUDORANDOM = 3;
 
-        //Using variables from book
-        int N; // N is number in HashDictionary
-        int M; //M is the max size of the HashDictionary
-        float alpha;//Alpha is N/M
         Scanner in = new Scanner(System.in);
 
         //Size must be a power of two so that quadratic probing reaches all spots
         System.out.println("Please enter size of HashDictionary (Must be Power of 2): ");
-
-        try{
+        try
+        {
             SIZE = in.nextInt();
         }
         catch(Exception e)
@@ -47,31 +51,60 @@ public class HashDictionaryTester {
             entries[i] = temp;
         }
 
+        HashDictionary linHashDict = new HashDictionary(SIZE, LINEAR);
+        HashDictionary quadHashDict = new HashDictionary(SIZE, QUADRATIC);
+        HashDictionary pRandHashDict = new HashDictionary(SIZE, PSEUDORANDOM);
 
-        //Insert into HashDictionary
-        System.out.println("INSERT \n------");
-        HashDictionary hashDict = new HashDictionary(SIZE);
         Integer key; String value;
+
+        System.out.println("============= INSERT ============");
+        //Insert into Hash Dictionary using Linear Probing
+        System.out.println("\n= 1. Linear Probing =\n");
         for(int i=0; i < SIZE; i++) {
             key = entries[i].key();
             value = entries[i].value();
-
-            hashDict.insert(key, value);
-            alpha = (float)hashDict.size() / (float)SIZE;
-            System.out.println("alpha: " + alpha);
+            linHashDict.insert(key, value);
+        }
+        //Insert into Hash Dictionary using Quadratic Probing
+        System.out.println("\n= 2. Quadratic Probing =\n");
+        for(int i=0; i < SIZE; i++) {
+            key = entries[i].key();
+            value = entries[i].value();
+            quadHashDict.insert(key, value);
+        }
+        //Insert into Hash Dictionary using Linear Probing
+        System.out.println("\n= 3. Pseudo Random Probing =\n");
+        for(int i=0; i < SIZE-1; i++) {
+            key = entries[i].key();
+            value = entries[i].value();
+            pRandHashDict.insert(key, value);
         }
 
-        hashDict.print();
+        linHashDict.print();
 
-        //Remove from HashDictionary
-        System.out.println("REMOVE \n------");
-        for(int i = 0; i < SIZE; i++) {
-            String temp;
-            temp = hashDict.removeAny();
-            alpha = (float)hashDict.size() / (float)SIZE;
-            System.out.println(temp + "    alpha: " + alpha);
+        //Remove from Hash Dictionaries
+        System.out.println("\n=========== DELETE ===========\n");
+        String temp;
+        //Delete from Hash Dictionary using Linear Probing
+        System.out.println("\n= 1. Linear Probing =\n");
+        for(int i=0; i < SIZE; i++) {
+            key = entries[i].key();
+            linHashDict.remove(key);
+        }
+        //Delete from Hash Dictionary using Quadratic Probing
+        System.out.println("\n= 2. Quadratic Probing =\n");
+        for(int i=0; i < SIZE; i++) {
+            key = entries[i].key();
+            quadHashDict.remove(key);
+        }
+        //Delete from Hash Dictionary using Linear Probing
+        System.out.println("\n= 3. Pseudo Random Probing =\n");
+        for(int i=0; i < SIZE-1; i++) {
+            key = entries[i].key();
+            pRandHashDict.remove(key);
         }
 
+        linHashDict.print();
 
     }
 }

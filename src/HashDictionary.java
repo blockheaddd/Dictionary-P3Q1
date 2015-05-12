@@ -1,17 +1,32 @@
-/** Dictionary implemented using hashing. */
+/**
+ * HashDictionary.java
+ *
+ * A class that implements the Dictionary ADT
+ * using hashing as a means of inserting and removing
+ * Code is from  the Data Structures book
+ * with slight modifications by
+ * Gus Silva and Anil Jethani
+ * Using IntelliJ IDEA 14
+ * On 5/4/14
+ */
+
 class HashDictionary implements Dictionary{
     private static final int defaultSize = 10;
     private HashTable hashTbl; // The hash table
     private int count; // # of records now in table
     private int maxsize; // Maximum size of dictionary
-    HashDictionary() { this(defaultSize); }
-    HashDictionary(int sz) {
+    private int hashType; //Type of hashing to perform
+
+    HashDictionary() { this(defaultSize, 1); }
+
+    HashDictionary(int sz, int hshTyp) {
         maxsize = sz;
-        hashTbl = new HashTable(maxsize);
+        hashType = hshTyp;
+        hashTbl = new HashTable(maxsize, hashType);
         count = 0;
     }
     public void clear() { /** Reinitialize */
-        hashTbl = new HashTable(maxsize);
+        hashTbl = new HashTable(maxsize, hashType);
         count = 0;
     }
     public void insert(int k, String e) { /** Insert an element */

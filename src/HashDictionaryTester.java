@@ -43,11 +43,11 @@ public class HashDictionaryTester {
         }
 
         //Create an array of KVPairs with random ID's and elements
-        KVpair entries[] = new KVpair[SIZE];
+        KVPair entries[] = new KVPair[SIZE];
         Random rand = new Random(100);
         for(int i = 0; i < SIZE; i ++)
         {
-            KVpair temp = new KVpair(rand.nextInt(100), (char)(i+65) + "");
+            KVPair temp = new KVPair(rand.nextInt(100), (char)(i+65) + "");
             entries[i] = temp;
         }
 

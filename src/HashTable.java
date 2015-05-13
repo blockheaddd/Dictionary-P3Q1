@@ -24,20 +24,20 @@ public class HashTable {
     private int accessCount = 1;
     private float count = 0;
     float alpha;
-    KVpair HT[];
+    KVPair HT[];
     int randArr[];
 
 
     HashTable()    //Default Constructor
     {
         SIZE = 10;
-        HT = new KVpair[SIZE];
+        HT = new KVPair[SIZE];
     }
 
     HashTable(int sz, int hshTyp)
     {
         SIZE = sz;
-        HT = new KVpair[SIZE];
+        HT = new KVPair[SIZE];
 
         if(hshTyp < 1 || hshTyp > 3)
         {
@@ -102,7 +102,7 @@ public class HashTable {
             } while (HT[pos] != null);
         }
 
-        HT[pos] = new KVpair(k, r); // Insert R
+        HT[pos] = new KVPair(k, r); // Insert R
         count++;
         alpha = count / (float)SIZE;
         System.out.println("N: " + accessCount + "  A: " + alpha);
